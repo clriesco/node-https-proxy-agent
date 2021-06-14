@@ -38,6 +38,7 @@ export default function parseProxyResponse(
 
 		function onend() {
 			debug('onend');
+			reject(new Error('connection dropped'));
 		}
 
 		function onerror(err: Error) {
